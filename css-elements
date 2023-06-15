@@ -1,0 +1,287 @@
+<style>
+@media (min-width: 990px) {
+  .rally-shipping-address-block {
+    padding-top: 5px;
+  }
+  .rally-shipping-address-block .rally-field-wrapper.rally-form-group {
+    margin-bottom: 15px;
+  }
+  .rally-shipping-address-block .rally-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-form-group {
+    margin-bottom: 0;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-form-control {
+    border: none;
+    box-shadow: none;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-form-control.rally-focus, .rally-shipping-address-block .rally-form-wrapper .rally-form-control:focus {
+    border-radius: 0;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper:not(.rally-field-hidden) {
+    width: 100%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-firstName, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-lastName, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-company, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address1, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-city, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-zip, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-province, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address2, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-country {
+    border-bottom: 1px solid var(--border-color);
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-firstName, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address1, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty), .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-country {
+    border-right: 1px solid var(--border-color);
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-firstName, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-lastName, .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-country {
+    flex-basis: 50%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-country {
+    flex-grow: 1;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty) {
+    flex-basis: 25%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty) + .rally-field-wrapper.rally-zip {
+    flex-basis: 25%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-province {
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: auto;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address1 {
+    flex-basis: 100%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address2 {
+    flex-basis: 100%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-zip {
+    flex-basis: 50%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-firstName, .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-country, .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty) {
+    padding-right: 0;
+  }
+  .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-lastName, .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty), .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-zip {
+    padding-left: 0;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .flex-basis-quarter {
+    flex-basis: 25%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .flex-basis-half {
+    flex-basis: 50%;
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address1 {
+    flex-basis: calc(((100%) / 3) * 2);
+  }
+  .rally-shipping-address-block .rally-form-wrapper .rally-field-wrapper.rally-address2 {
+    flex-basis: calc((100%) / 3);
+  }
+  .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-address1 {
+    margin-right: 0px;
+  }
+  .rally-shipping-address-block .rally-form-wrapper > .rally-field-wrapper.rally-address2 {
+    margin-left: 0px;
+  }
+  .rally-credit-card-block {
+    margin-top: 20px;
+  }
+  .rally-credit-card-block #payment-methods .rally-heading {
+    visibility: hidden;
+  }
+  .rally-credit-card-block .rally-credit-card-subheading {
+    position: absolute;
+    right: 0;
+    top: -3px;
+  }
+  .rally-credit-card-block .rally-credit-card-heading-subheading-wrapper {
+    height: 0;
+  }
+  .rally-credit-card-block .rally-card-information-heading {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+  }
+  .rally-credit-card-block .rally-credit-card-icon {
+    position: relative;
+    top: 40px;
+    right: 15px;
+    z-index: 1;
+  }
+  .rally-credit-card-block .rally-credit-card {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .rally-credit-card-block .rally-credit-card .rally-card-input {
+    margin-bottom: 0px;
+  }
+  .rally-credit-card-block .rally-billing-address-option-block .rally-billing-heading {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .rally-credit-card-block .rally-pay-enroll-block {
+    padding-top: 10px;
+  }
+  .rally-credit-card-block .rally-enroll-container {
+    background-color: transparent;
+  }
+  .rally-credit-card-block .rally-credit-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .rally-credit-card-block .rally-form-control:not(.rally-phone-form-control) {
+    box-shadow: none;
+  }
+  .rally-credit-card-block .rally-credit-card {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  .rally-credit-card-block .rally-card-input:nth-child(1) {
+    border-bottom: 1px solid var(--border-color);
+  }
+  .rally-credit-card-block .rally-credit-card > *:nth-child(1) {
+    flex-basis: 100%;
+  }
+  .rally-credit-card-block .rally-credit-card > *:nth-child(2) {
+    flex-basis: 50%;
+  }
+  .rally-credit-card-block .rally-credit-card > *:nth-child(3), .rally-credit-card-block .rally-credit-card > *:nth-child(4) {
+    flex-basis: 25%;
+  }
+  .rally-credit-card-block .rally-credit-card > *:nth-child(2), .rally-credit-card-block .rally-credit-card > *:nth-child(3) {
+    border-right: 1px solid var(--border-color);
+  }
+  .rally-purchase-block-fixed {
+    padding-top: 30px;
+    position: fixed;
+    bottom: 20px;
+    width: 500px;
+    z-index: 1;
+  }
+  .rally-accept-tou {
+    margin-bottom: 10px;
+  }
+  .rally-image-thumbnails .rally-thumbnails-container {
+    width: 320px;
+    height: 320px;
+  }
+  .rally-image-gallery {
+    display: flex;
+    justify-content: center;
+  }
+  .rally-image-thumbnails .rally-thumbnails-wrapper {
+    display: none;
+  }
+  .rally-shipping-address-block .rally-form-control.rally-no-value.rally-invalid.rally-dirty:not(:focus) ~ label.rally-form-control-label, .rally-shipping-address-block .rally-form-control.rally-no-value.rally-invalid.rally-errors-msg-show:not(:focus) ~ label.rally-form-control-label {
+    display: none;
+  }
+  .rally-shipping-address-block .rally-form-control.rally-no-value.rally-invalid.rally-dirty:not(:focus) ~ span.rally-error-msg, .rally-shipping-address-block .rally-form-control.rally-no-value.rally-invalid.rally-errors-msg-show:not(:focus) ~ span.rally-error-msg {
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    opacity: 1;
+    line-height: normal;
+    pointer-events: none;
+  }
+  .rally-shipping-address-block .rally-form-control.rally-has-value.rally-invalid.rally-dirty:not(:focus) ~ span.rally-error-msg, .rally-shipping-address-block .rally-form-control.rally-has-value.rally-invalid.rally-errors-msg-show:not(:focus) ~ span.rally-error-msg {
+    top: -6px;
+    padding-left: 15px;
+  }
+  .rally-credit-card-block .rally-form-control.rally-empty.rally-invalid.rally-dirty:not(.rally-focus) ~ label.rally-form-control-label, .rally-credit-card-block .rally-form-control.rally-empty.rally-invalid.rally-errors:not(.rally-focus) ~ label.rally-form-control-label {
+    display: none;
+  }
+  .rally-credit-card-block .rally-form-control.rally-empty.rally-invalid.rally-dirty:not(.rally-focus) ~ span.rally-error-msg, .rally-credit-card-block .rally-form-control.rally-empty.rally-invalid.rally-errors:not(.rally-focus) ~ span.rally-error-msg {
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    opacity: 1;
+    line-height: normal;
+    pointer-events: none;
+  }
+  .rally-credit-card-block .rally-form-control.rally-invalid.rally-dirty:not(.rally-empty) ~ span.rally-error-msg, .rally-credit-card-block .rally-form-control.rally-invalid.rally-errors:not(.rally-empty) ~ span.rally-error-msg {
+    top: -6px;
+    padding-left: 15px;
+  }
+}
+.rally-image-thumbnails {
+  display: flex;
+  justify-content: center;
+}
+.rally-express-heading {
+  line-height: 14px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+}
+.rally-or-block {
+  position: relative;
+  margin: 35px 0 25px;
+}
+.rally-zero-amount-info {
+  padding: 0;
+  display: none !important;
+}
+.rally-logo {
+  height: 30px;
+  border-radius: 50%;
+}
+
+ .rally-initial-loader-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.rally-initial-loader-wrapper.rally-initial-loader-hide {
+  display: none;
+}
+.column {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.dark-shimmer, .light-shimmer {
+  height: 100%;
+  position: relative;
+}
+.dark-shimmer::before, .light-shimmer::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  animation: shimmer 2s infinite;
+}
+.dark-shimmer {
+  background-color: #333;
+}
+.light-shimmer {
+  background-color: #eee;
+}
+.dark-shimmer::before {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.light-shimmer::before {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+}
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@media (max-width: 990px) {
+  .light-shimmer {
+    display: none;
+  }
+  .dark-shimmer {
+    width: 100%;
+  }
+}
+</style>
