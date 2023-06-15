@@ -1,0 +1,35 @@
+<link href="https://js.onrally.com/elements/styles.css" rel="stylesheet" type="text/css">
+<script src="https://js.onrally.com/elements/elements.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+    const handleShowConfirmation = () => {
+		document.getElementById('checkoutSection').classList.add('rally-d-none');
+      	document.getElementById('confirmationSection').classList.remove('rally-d-none');
+	};
+    const handleSessionState = () => {
+        Rally.events.subscribe('cart.initiated', () => {
+            sessionStorage.setItem('rallyCheckoutSessionId', Rally.data.page.get()?.checkoutSessionId);
+        });
+        Rally.events.subscribe('customFlow.updated', () => {
+            handleShowConfirmation();
+            sessionStorage.removeItem('rallyCheckoutSessionId');
+        });
+        Rally.events.subscribe('all', (details) => {
+           if (details.event === 'page.error' && details?.data?.error === 'Checkout completed') {
+              sessionStorage.removeItem('rallyCheckoutSessionId');
+              location.reload();
+           }
+        });
+                                   
+    };
+    const config = { includeElements: ['rally-confirmation-details'], flowSegments: ['other'], customCheckoutFlow: { disableRedirect: true }, sessionOrigin: 'landing_page', pageType: localStorage.getItem('rallyPageType') || 'checkout' };
+    const persistedCheckoutId = sessionStorage.getItem('rallyCheckoutSessionId');
+    if (persistedCheckoutId) {
+        config.checkoutSessionId = persistedCheckoutId;
+    } else {
+        config.lineItems = [{ productId: 300, quantity: 1, includeDetails: true }]
+    }
+    handleSessionState();
+    Rally.init('9382089f-6671-4387-94c5-85a6f7f6fcc7', config);
+</script>
